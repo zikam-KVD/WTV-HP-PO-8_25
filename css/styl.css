@@ -1,5 +1,7 @@
 * {
     font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -60,5 +62,58 @@ div.article--image {
     background-size: cover;
     border: 2px dashed #836023;
     border-radius: 15px;
+}
+
+:root {
+    --main-color: darkblue;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--main-color);
+    /*padding: 20px 0 25px 0;*/
+    padding: 20px 0;
+    /*height: 150px;*/
+}
+header {
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header img {
+    width: 300px;
+}
+
+footer .footer--inner, header .header--inner  {
+    width: 75vw; /* alternativa k 75% */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 75vw; /* alternativa k 75% */
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    padding: 25px 0;
+    /*
+    padding-top: 25px;
+    padding-bottom: 25px;
+    */
+}
+
+.footer--inner div {
+    /*float: right;*/
+    display: flex;
+    gap: 15px;
+}
+
+
+footer a, footer span {
+    color: white;
 }
 
