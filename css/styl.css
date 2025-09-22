@@ -1,0 +1,64 @@
+* {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+span.zvyrazni {
+    font-weight: bold;
+}
+
+span.zvyrazni:hover {
+    cursor: pointer;
+    color: green;
+    transition: color .5s ease;
+}
+
+article {
+    width: 55vw;
+    margin: auto;
+    background-color: rgba(131, 96, 35, 0.5);
+    border: 2px dashed #836023;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+header p, footer p {
+    font-style: italic;
+}
+
+footer p {
+    font-size: .75rem;
+    text-align: right;
+}
+
+p {
+    text-align: justify;
+    line-height: 2rem;
+}
+
+p#dva-radky {
+    column-count: 2;    
+    column-gap: 2rem;
+    column-rule: 2px solid Black;
+}
+
+img {
+    max-width: 100%;    
+}
+
+div.article--image {
+    width: 100%;
+    aspect-ratio: 2;
+    background-image: url('../img/hagrid_chatrc.webp');
+    background-size: cover;
+    border: 2px dashed #836023;
+    border-radius: 15px;
+}
+
