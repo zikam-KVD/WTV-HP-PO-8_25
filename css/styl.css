@@ -1,4 +1,4 @@
-* {
+body {
     font-size: 14px;
     margin: 0;
     padding: 0;
@@ -68,21 +68,22 @@ div.article--image {
     --main-color: darkblue;
 }
 
-footer {
+body > footer {
     width: 100%;
     background-color: var(--main-color);
     /*padding: 20px 0 25px 0;*/
     padding: 20px 0;
     /*height: 150px;*/
 }
-header {
+
+body > header {
     background-color: var(--main-color);
     color: white;
     display: flex;
     justify-content: space-evenly;
 }
 
-header img {
+body > header img {
     width: 300px;
 }
 
@@ -94,10 +95,11 @@ footer .footer--inner, header .header--inner  {
     align-items: center;
 }
 
-main {
+body > main {
     width: 75vw; /* alternativa k 75% */
     margin: auto;
     display: flex;
+    flex-wrap: nowrap;
     gap: 25px;
     padding: 25px 0;
     /*
@@ -112,8 +114,38 @@ main {
     gap: 15px;
 }
 
-
 footer a, footer span {
     color: white;
+}
+
+@media print {
+    body, * {
+        display: none;
+    }    
+}
+
+@media (max-width: 1024px) {
+    body > main {
+        flex-wrap: wrap;
+    }  
+
+    body > main > a {
+        max-width: calc(50% - 25px);
+    } 
+
+    body > main {
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    body > main {
+        flex-direction: column;
+    }
+
+    body > main > a {
+        max-width: 100%;
+    }
+
 }
 
